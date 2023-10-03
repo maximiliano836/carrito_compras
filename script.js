@@ -1,27 +1,33 @@
 [
 	{
-		"name": "50994391-5",
+		"name": "Auriculares",
 		"color": "#f9c2f8",
-		"precio": 674
+		"precio": 674,
+		"imagen":"img\auriculares.jpg",
 	},
 	{
-		"name": "13434658-2",
+		"name": "catan",
 		"color": "#8bf760",
-		"precio": 838
+		"precio": 838,
+		"imagen":"img\catan.jpg",
 	},
 	{
-		"name": "4610397-1",
+		"name": "Mesa pool",
 		"color": "#0e9e4e",
-		"precio": 257
+		"precio": 257,
+		"imagen":"img\mesapool.jpg",
+
 	},
 	{
-		"name": "1923755-9",
+		"name": "cubo rubik",
 		"color": "#1282aa",
-		"precio": 196
+		"precio": 196,
+		"imagen":"img\rubik.jpg",	
 	},
 	{
-		"name": "22590516-9",
+		"name": "peluche escandaloso",
 		"color": "#09ed86",
-		"precio": 608
+		"precio": 608,
+		"imagen":"img\pelucheescandaloso.jpg",
 	}
 ]
