@@ -1,4 +1,4 @@
-[
+const productos=[
 	{
 		"name": "50994391-5",
 		"color": "#f9c2f8",
