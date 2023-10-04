@@ -10,28 +10,46 @@
   <body>
     <div class="container">
       <header>
-        <h1>ElectroTech</h1>
+        <h1 class="display-1 text-primary">ElectroTech</h1>
       </header>
 
-      <main>
-        <form id="customer-form">
-          <label for="customer-name">Nombre del Cliente:</label>
-          <input type="text" id="customer-name" required />
-          <label for="customer-rut">RUT (opcional):</label>
-          <input type="text" id="customer-rut" />
-          <input type="checkbox" id="consumer-final" name="consumer-final" />
-          <label for="consumer-final">Consumidor Final</label>
-        </form>
-        <ul id="listaProductos"></ul>
-      </main>
-      <br>
-      <div >
-        <h1>Carrito de compras</h1>
-        <p id="carrito">Productos:</p>
-        <div id="preciototal">Precio Total: $0</div>
-    </div>
+      <br />
 
-      <br>
+      <h3 class="text-secondary">Productos disponibles:</h3>
+
+      <div class="row" id="listaProductos"></div>
+
+      <br />
+
+      <hr />
+
+      <div>
+        <h1>Carrito de compras</h1>
+
+        <main class="col-md-4">
+          <form class="form-control form-group col-md-6">
+            <label for="customer-name">Nombre y Apellido:</label>
+            <input type="text" id="customer-name" required />
+            <label for="customer-rut">RUT (opcional):</label>
+            <input type="text" id="customer-rut" />
+            <label for="consumer-final">Consumidor Final</label>
+            <input type="checkbox" id="consumer-final" name="consumer-final" />
+          </form>
+        </main>
+        <br />
+
+        <li id="carrito" class="font-weight-bold">Productos:</li>
+        <li id="preciototal" class="font-weight-bold">Precio Total: $0</li>
+        <br />
+        <button class="btn btn-primary comprar-btn" data-id="${producto.id}">
+          Finalizar Compra
+        </button>
+      </div>
+
+      <br />
+
+      <hr />
+
       <footer>
         <p>&copy; 2023 ElectroTech</p>
       </footer>
