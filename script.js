@@ -1,4 +1,5 @@
 
+
 const productos = [
   {
     name: "cemento" ,
@@ -153,8 +154,7 @@ const productos = [
     precio: 69,
     imagen: "",
     moneda: "USS",
-  },
-];
+   }]
 
 const carrito = document.getElementById("carrito");
 const listaProductos = document.getElementById("listaProductos");
