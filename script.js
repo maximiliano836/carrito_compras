@@ -1,36 +1,3 @@
-const productos = [
-  {
-    name: "Auriculares",
-    id: 1,
-    color: "#f9c2f8",
-    precio: 674,
-    imagen: "img/auriculares.jpg",
-  },
-  {
-    name: "Catan",
-    id: 2,
-    precio: 838,
-    imagen: "img/catan.jpg",
-  },
-  {
-    name: "Mesa pool",
-    id: 3,
-    precio: 257,
-    imagen: "img/mesapool.jpg",
-  },
-  {
-    name: "Cubo Rubik",
-    id: 4,
-    precio: 196,
-    imagen: "img/rubik.jpg",
-  },
-  {
-    name: "Peluche Escandaloso",
-    id: 5,
-    precio: 608,
-    imagen: "img/pelucheescandaloso.jpg",
-  },
-];
 
 const carrito = document.getElementById("carrito");
 const listaProductos = document.getElementById("listaProductos");
