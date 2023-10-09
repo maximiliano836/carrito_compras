@@ -1,39 +1,199 @@
-const productos=[
-	{
 
-		"name": "Auriculares",
-		"id":1,
-		"color": "#f9c2f8",
-		"precio": 674,
-		"imagen":"img\auriculares.jpg",
-	},
-	{
+const productos = [
+  {
+    name: "cemento" ,
+    id: 1,
+    
+    precio: 6,
+    imagen: "img/auriculares.jpg",
+    moneda: "USS",
+  },
+  {
+    name: "canio de cobre",
+    id: 2,
+    precio: 8,
+    imagen: "img/catan.jpg",
+    moneda: "USS",
+  },
+  {
+    name: "tornilladora",
+    id: 3,
+    precio: 7,
+    imagen: "img/mesapool.jpg",
+    moneda: "USS",
+  },
+  {
+    name: "taladro",
+    id: 4,
+    precio: 6,
+    imagen: "",
+    moneda: "USS",
+  },
+  {
+    name: "compresor",
+    id: 5,
+    precio: 608,
+    imagen: "",
+    moneda: "USS",
+  },
+  {
+    name: "martillo" ,
+    id: 6,
+    precio: 6,
+    imagen: "",
+    moneda: "USS",
+  },
+  {
+    name: "balde",
+    id: 7,
+    precio: 8,
+    imagen: "",
+    moneda: "USS",
+  },
+  {
+    name: "arena",
+    id: 8,
+    precio: 7,
+    imagen: "",
+    moneda: "USS",
+  },
+  {
+    name: "trifasico",
+    id: 9,
+    precio: 6,
+    imagen: "",
+  },
+  {
+    name: "franelas",
+    id: 10,
+    precio: 68,
+    imagen: "",
+    moneda: "USS",
+  },
+  {
+    name: "cinta aluminio",
+    id: 11,
+    precio: 7,
+    imagen: "",
+    moneda: "USS",
+  },
+  {
+    name: "motosierra",
+    id: 11,
+    precio: 6,
+    imagen: "",
+    moneda: "USS",
+  },
+  {
+    name: "aislacion",
+    id: 12,
+    precio: 8,
+    imagen: "",
+    moneda: "USS",
+  },
+   {
+    name: "hidrolavadora",
+    id: 13,
+    precio: 89,
+    imagen: "",
+    moneda: "USS",
+  },
+   {
+    name: "rejilla",
+    id: 13,
+    precio: 89,
+    imagen: "",
+    moneda: "USS",
+  },
+   {
+    name: "pintura",
+    id: 14,
+    precio: 59,
+    imagen: "",
+    moneda: "USS",
+  },
+   {
+    name: "cal",
+    id: 15,
+    precio: 66,
+    imagen: "",
+    moneda: "USS",
+  },
+   {
+    name: "porlan",
+    id: 16,
+    precio: 669,
+    imagen: "",
+    moneda: "USS",
+  },
+   {
+    name: "baldoza",
+    id: 17,
+    precio: 969,
+    imagen: "",
+    moneda: "USS",
+  },
+   {
+    name: "lampara bajo consumo",
+    id: 18,
+    precio: 49,
+    imagen: "",
+    moneda: "USS",
+  },
+   {
+    name: "moladora",
+    id: 19,
+    precio: 47,
+    imagen: "",
+    moneda: "USS",
+  },
+   {
+    name: "rotamartillo",
+    id: 20,
+    precio: 69,
+    imagen: "",
+    moneda: "USS",
+  },
+];
 
-		"name": "catan",
-		"id":2,
-		"precio": 838,
-		"imagen":"img\catan.jpg",
-	},
-	{
+const carrito = document.getElementById("carrito");
+const listaProductos = document.getElementById("listaProductos");
+const precioTotalElement = document.getElementById("preciototal");
+let precioTotal = 0;
 
-		"name": "Mesa pool",
-     "id":3,
-		"name": "4610397-1",
-		"precio": 257,
-		"imagen":"img\mesapool.jpg",
+productos.forEach((producto) => {
+  const productoDiv = document.createElement("div");
+  productoDiv.className = "col-md-5 mb-5";
 
-	},
-	{
-		"name": "cubo rubik",
-		"id":4,
-		"precio": 196,
-		"imagen":"img\rubik.jpg",	
-	},
-	{
+  productoDiv.innerHTML = `
+  <div class="card ">
+    <img src="${producto.imagen}" class="card-img-top" style="max-width: 200px; max-height: 200px;" alt="${producto.name}">
+    <div class="card-body">
+      <h5 class="card-title">${producto.name}</h5>
+      <p class="card-text">Precio: $${producto.precio}</p>
+      <button class="btn btn-primary comprar-btn" data-id="${producto.id}">Comprar</button>
+    </div>
+  </div>
+`;
 
-		"name": "peluche escandaloso",
-		"id":5,
-		"precio": 608,
-		"imagen":"img\pelucheescandaloso.jpg",
-	}
-]
+  const comprarBtn = productoDiv.querySelector(".comprar-btn");
+  comprarBtn.addEventListener("click", () => {
+    agregarAlCarrito(producto);
+    window.location.href = "#carrito";
+  });
+
+  const listaProductos = document.getElementById("listaProductos");
+  listaProductos.appendChild(productoDiv);
+});
+
+function agregarAlCarrito(producto) {
+  const carrito = document.getElementById("carrito");
+  const productoCarrito = document.createElement("div");
+  productoCarrito.innerHTML = `
+    <p>${producto.name} - Precio: $${producto.precio}</p>
+  `;
+  carrito.appendChild(productoCarrito);
+
+  precioTotal += producto.precio;
+  precioTotalElement.textContent = `Precio Total: $${precioTotal}`;
+}
