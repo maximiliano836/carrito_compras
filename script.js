@@ -192,8 +192,9 @@ const productos = [
      productosEnCarrito.push(producto);
    
      const productoCarrito = document.createElement("div");
+     productoCarrito.classList.add("list-group");
      productoCarrito.innerHTML = `
-       <p>${producto.name} - Precio: $${producto.precio} <button class="btn btn-primary eliminar-btn" data-id="${producto.id}">Eliminar</button></p>
+       <p class="font-family-monospace">${producto.name} - Precio: $${producto.precio} <button class="btn btn-primary eliminar-btn" data-id="${producto.id}">Eliminar</button></p>
      `;
      carrito.appendChild(productoCarrito);
    
