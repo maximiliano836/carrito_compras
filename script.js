@@ -165,7 +165,7 @@ const productos = [
    
      productoDiv.innerHTML = `
      <div class="card ">
-       <img src="${producto.imagen}" class="card-img-top" style="max-width: 200px; max-height: 200px;" alt="${producto.name}">
+       <img src="${producto.imagen}" class="card-img-top" style="max-width: 200px; max-height: 200px; min-width: 200px; min-height: 200px;" alt="${producto.name}">
        <div class="card-body">
          <h5 class="card-title">${producto.name}</h5>
          <p class="card-text">Precio: $${producto.precio}</p>
@@ -192,6 +192,7 @@ const productos = [
      const productoCarrito = document.createElement("div");
      productoCarrito.classList.add("list-group");
      productoCarrito.innerHTML = `
+     <img src="${producto.imagen}" class="card-img-top" style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;" alt="${producto.name}">
        <p class="font-family-monospace">${producto.name} - Precio: $${producto.precio} <button class="btn btn-primary eliminar-btn" data-id="${producto.id}">Eliminar</button></p>
      `;
      carrito.appendChild(productoCarrito);
