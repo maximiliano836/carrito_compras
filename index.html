@@ -36,10 +36,36 @@
             <input type="checkbox" id="consumer-final" name="consumer-final" />
           </form>
         </main>
-        
-        <footer>
-            <p>&copy; 2023 Barraca /p>
-        </footer>
+        <br />
+
+        <li id="carrito" class="font-weight-bold">Productos:</li>
+        <li id="preciototal" class="font-weight-bold">Precio Total: $0</li>
+        <br />
+        <div>
+          <label for="contado">Contado</label>
+          <input type="radio" id="contado" name="metodopago" />
+          <br>
+          <label for="credito">Crédito</label>
+          <input type="radio" id="credito" name="metodopago" />
+          <br>
+          <label for="debito">Débito</label>
+          <input type="radio" id="debito" name="metodopago" />
+        </div>
+        <br>
+        <li id="totalapagar" class="font-weight-bold">Total a pagar: $0</li>
+        <br>
+        <button class="btn btn-primary comprar-btn" data-id="${producto.id}">
+          Finalizar Compra
+        </button>
+      </div>
+
+      <br />
+
+      <hr />
+
+      <footer>
+        <p>&copy; 2023 ElectroTech</p>
+      </footer>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
