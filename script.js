@@ -124,7 +124,7 @@ const productos = [
     name: "membrana líquida",
     id: 16,
     precio: 669,
-    imagen: "imgs/membrana_liquida.jpeg",
+    imagen: "imgs/membrana_liquida.jpg",
     moneda: "U$S",
   },
    {
