@@ -26,33 +26,41 @@
 
       <div>
         <div>
-          <h1>Carrito de compras</h1>
-
-          <main class="col-md-4">
-              <form class="form-control form-group col-md-6">
-                  <div>
-                      <input type="radio" id="cash" name="payment-method" value="cash">
-                      <label for="cash">Efectivo(10% OFF)</label>
-                  </div>
-                  <div>
-                      <input type="radio" id="debit" name="payment-method" value="debit">
-                      <label for="debit">Débito</label>
-                  </div>
-                  <div>
-                      <input type="radio" id="credit" name="payment-method" value="credit">
-                      <label for="credit">Crédito(7% EXTRA)</label>
-                  </div>
-              </form>
-          </main>
+          <h2>Carrito de compras:</h2>
           <br />
       </div>
 
 
-        <li id="carrito" class="font-weight-bold">Productos:</li>
+      <p><strong>Productos:</strong></p><ul id="carrito" class="font-weight-bold"></ul>
+        <br />
+        <div>
+          <div>
+            <h2>Método de pago:</h2>
+            <br />
+        </div>
+        <main class="col-md-4">
+          <form class="form-control form-group col-md-6">
+              <div>
+                  <input type="radio" id="cash" name="payment-method" value="cash">
+                  <label for="cash">Efectivo(10% OFF)</label>
+              </div>
+              <div>
+                  <input type="radio" id="debit" name="payment-method" value="debit">
+                  <label for="debit">Débito</label>
+              </div>
+              <div>
+                  <input type="radio" id="credit" name="payment-method" value="credit">
+                  <label for="credit">Crédito(7% EXTRA)</label>
+              </div>
+          </form>
+      </main>
+      <br />
+
         <li id="preciototal" class="font-weight-bold">Precio Total: $0</li>
         <br />
+        <button class="btn btn-primary eliminar-btn" data-id="${p.id}">Finalizar Compra</button>
         <hr />
-
+      
       <footer>
         <p>&copy; 2023 BarracaLadrillos</p>
       </footer>

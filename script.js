@@ -219,7 +219,7 @@ const productos = [
        productosEnCarrito.forEach((p) => {
          const productoCarrito = document.createElement("div");
          productoCarrito.innerHTML = `
-           <p>${p.name} - Precio: $${p.precio} <button class="btn btn-primary eliminar-btn" data-id="${p.id}">Eliminar</button></p>
+           <p>${p.name} - Precio: $${p.precio} <button class="btn btn-secundary eliminar-btn" data-id="${p.id}">Eliminar</button></p>
          `;
          carrito.appendChild(productoCarrito);
    
