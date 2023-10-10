@@ -2,63 +2,63 @@
 
 const productos = [
   {
-    name: "cemento" ,
+    name: "cemento portland" ,
     id: 1,
     precio: 6,
     imagen: "imgs/cemento.png",
     moneda: "USS",
   },
   {
-    name: "canio de cobre",
+    name: "caño de cobre",
     id: 2,
     precio: 8,
     imagen: "canio_de_cobre.jpeg",
     moneda: "USS",
   },
   {
-    name: "tornilladora",
+    name: "Tornillador eléctico",
     id: 3,
     precio: 7,
     imagen: "img/mesapool.jpg",
-    moneda: "USS",
+    moneda: "U$S",
   },
   {
     name: "taladro",
     id: 4,
     precio: 6,
     imagen: "",
-    moneda: "USS",
+    moneda: "U$S",
   },
   {
     name: "compresor",
     id: 5,
     precio: 608,
     imagen: "",
-    moneda: "USS",
+    moneda: "U$S",
   },
   {
     name: "martillo" ,
     id: 6,
     precio: 6,
     imagen: "",
-    moneda: "USS",
+    moneda: "U$S",
   },
   {
     name: "balde",
     id: 7,
     precio: 8,
     imagen: "",
-    moneda: "USS",
+    moneda: "U$S",
   },
   {
     name: "arena",
     id: 8,
     precio: 7,
     imagen: "",
-    moneda: "USS",
+    moneda: "U$S",
   },
   {
-    name: "trifasico",
+    name: "trifásico",
     id: 9,
     precio: 6,
     imagen: "",
@@ -86,7 +86,7 @@ const productos = [
     moneda: "U$S",
   },
   {
-    name: "aislacion",
+    name: "aislación",
     id: 12,
     precio: 8,
     imagen: "",
@@ -234,3 +234,22 @@ const productos = [
        precioTotalElement.textContent = `Precio Total: $${precioTotal}`;
      }
    }
+
+   document.getElementById('cash').addEventListener('change', updateTotal);
+document.getElementById('debit').addEventListener('change', updateTotal);
+document.getElementById('credit').addEventListener('change', updateTotal);
+
+function updateTotal() {
+  let total = productosEnCarrito.reduce((total, p) => total + p.precio, 0);
+
+  if (this.id === 'cash') {
+   
+    total *= 0.9;
+  } else if (this.id === 'credit') {
+   
+    total *= 1.07;
+  }
+
+  precioTotal = total;
+  precioTotalElement.textContent = `Precio Total: $${precioTotal.toFixed(2)}`;
+}
