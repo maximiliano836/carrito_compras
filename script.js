@@ -234,3 +234,22 @@ const productos = [
        precioTotalElement.textContent = `Precio Total: $${precioTotal}`;
      }
    }
+
+   document.getElementById('cash').addEventListener('change', updateTotal);
+document.getElementById('debit').addEventListener('change', updateTotal);
+document.getElementById('credit').addEventListener('change', updateTotal);
+
+function updateTotal() {
+  let total = productosEnCarrito.reduce((total, p) => total + p.precio, 0);
+
+  if (this.id === 'cash') {
+   
+    total *= 0.9;
+  } else if (this.id === 'credit') {
+   
+    total *= 1.07;
+  }
+
+  precioTotal = total;
+  precioTotalElement.textContent = `Precio Total: $${precioTotal.toFixed(2)}`;
+}
