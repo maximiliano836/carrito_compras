@@ -219,8 +219,7 @@ const productos = [
        productosEnCarrito.forEach((p) => {
          const productoCarrito = document.createElement("div");
          productoCarrito.innerHTML = `
-         <img src="${producto.imagen}" class="list-group-item d-flex justify-content-between align-items-center card-img-top"  style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;" alt="${producto.name}">
-           <p class="font-family-monospace">${producto.name} - Precio: $${producto.precio} <button class="btn btn-primary eliminar-btn" data-id="${producto.id}">Eliminar</button></p>
+           <p>${p.name} - Precio: $${p.precio} <button class="btn btn-secundary eliminar-btn" data-id="${p.id}">Eliminar</button></p>
          `;
          carrito.appendChild(productoCarrito);
    
