@@ -4,7 +4,6 @@ const productos = [
   {
     name: "cemento" ,
     id: 1,
-    
     precio: 6,
     imagen: "img/auriculares.jpg",
     moneda: "USS",
