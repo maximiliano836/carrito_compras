@@ -2,21 +2,21 @@
 
 const productos = [
   {
-    name: "cemento" ,
+    name: "cemento portland" ,
     id: 1,
     precio: 6,
     imagen: "img/auriculares.jpg",
     moneda: "U$S",
   },
   {
-    name: "canio de cobre",
+    name: "caño de cobre",
     id: 2,
     precio: 8,
     imagen: "img/catan.jpg",
     moneda: "U$S",
   },
   {
-    name: "tornilladora",
+    name: "Tornillador eléctico",
     id: 3,
     precio: 7,
     imagen: "img/mesapool.jpg",
@@ -86,7 +86,7 @@ const productos = [
     moneda: "U$S",
   },
   {
-    name: "aislacion",
+    name: "aislación",
     id: 12,
     precio: 8,
     imagen: "",
