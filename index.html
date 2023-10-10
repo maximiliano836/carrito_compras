@@ -24,27 +24,48 @@
 
       <hr />
 
-      <div>
+      <div class="form-control form-group col-md-6">
+        <h2>Carrito de compras:</h2>
 
-        <h1>Carrito de compras</h1>
+        <br />
+   
 
-
-        <hr />
-
+        <p><strong>Productos:</strong></p><ul id="carrito" class="font-weight-bold"></ul>
+        <li id="preciototal" class="font-weight-bold">Precio Total: $0</li>
+        <br />
+      </div>
+      <hr />
+    <div class="form-control form-group col-md-6">
         <h2>Método de pago:</h2>
-        <div>
-          <label for="contado">Contado (10% de descuento)</label>
-          <input type="radio" id="contado" name="metodopago" />
-          <br>
-          <label for="credito">Crédito (7% de aumento)</label>
-          <input type="radio" id="credito" name="metodopago" />
-          <br>
-          <label for="debito">Débito</label>
-          <input type="radio" id="debito" name="metodopago" />
-        </div>
+        <main class="col-md-4">
+          <form >
+              <div>
+                  <input type="radio" id="cash" name="payment-method" value="cash">
+                  <label for="cash">Efectivo(10% OFF)</label>
+              </div>
+              <div>
+                  <input type="radio" id="debit" name="payment-method" value="debit">
+                  <label for="debit">Débito</label>
+              </div>
+              <div>
+                  <input type="radio" id="credit" name="payment-method" value="credit">
+                  <label for="credit">Crédito(+7% EXTRA)</label>
+              </div>
+          </form>
+      </main>
         <br>
         <li id="totalapagar" class="font-weight-bold">Total a pagar: $0</li>
         <br>
+        <button class="btn btn-primary comprar-btn" data-id="${producto.id}">
+          Finalizar Compra
+        </button>
+      </div>
+    </div>
+
+      <br />
+
+      <hr />
+
       <footer>
         <p>&copy; 2023 BarracaLadrillosSRL</p>
       </footer>
