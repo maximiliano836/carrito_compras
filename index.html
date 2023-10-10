@@ -7,10 +7,11 @@
     <link rel="stylesheet" href="bootstrap.min.css" />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body style="background-image: url(img/catan.jpg)">
     <div class="container">
       <header>
-        <h1 class="display-1 text-primary">ElectroTech</h1>
+        <h1 class="display-1 text-danger">Barraca Ladrillos</h1>
+        <h2 class="text-secondary">Tenemos el coso la cosa y el cosito</h2>
       </header>
 
       <br />
@@ -25,35 +26,29 @@
 
       <div>
         <h1>Carrito de compras</h1>
-
+    
         <main class="col-md-4">
-          <form class="form-control form-group col-md-6">
-            <label for="customer-name">Nombre y Apellido:</label>
-            <input type="text" id="customer-name" required />
-            <label for="customer-rut">RUT (opcional):</label>
-            <input type="text" id="customer-rut" />
-            <label for="consumer-final">Consumidor Final</label>
-            <input type="checkbox" id="consumer-final" name="consumer-final" />
-          </form>
+            <form class="form-control form-group col-md-6">
+                <div>
+                    <input type="radio" id="cash" name="payment-method" value="cash">
+                    <label for="cash">Efectivo(10% OFF)</label>
+                </div>
+                <div>
+                    <input type="radio" id="debit" name="payment-method" value="debit">
+                    <label for="debit">Débito</label>
+                </div>
+                <div>
+                    <input type="radio" id="credit" name="payment-method" value="credit">
+                    <label for="credit">Crédito(+7% EXTRA)</label>
+                </div>
+            </form>
         </main>
         <br />
+    </div>
 
         <li id="carrito" class="font-weight-bold">Productos:</li>
         <li id="preciototal" class="font-weight-bold">Precio Total: $0</li>
         <br />
-        <div>
-          <label for="contado">Contado</label>
-          <input type="radio" id="contado" name="metodopago" />
-          <br>
-          <label for="credito">Crédito</label>
-          <input type="radio" id="credito" name="metodopago" />
-          <br>
-          <label for="debito">Débito</label>
-          <input type="radio" id="debito" name="metodopago" />
-        </div>
-        <br>
-        <li id="totalapagar" class="font-weight-bold">Total a pagar: $0</li>
-        <br>
         <button class="btn btn-primary comprar-btn" data-id="${producto.id}">
           Finalizar Compra
         </button>
@@ -64,7 +59,7 @@
       <hr />
 
       <footer>
-        <p>&copy; 2023 ElectroTech</p>
+        <p>&copy; 2023 BarracaLadrillos</p>
       </footer>
     </div>
 
