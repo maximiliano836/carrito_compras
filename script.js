@@ -4,16 +4,15 @@ const productos = [
   {
     name: "cemento" ,
     id: 1,
-    
     precio: 6,
-    imagen: "img/auriculares.jpg",
+    imagen: "imgs/cemento.png",
     moneda: "USS",
   },
   {
     name: "canio de cobre",
     id: 2,
     precio: 8,
-    imagen: "img/catan.jpg",
+    imagen: "canio_de_cobre.jpeg",
     moneda: "USS",
   },
   {
