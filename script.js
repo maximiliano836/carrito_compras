@@ -187,15 +187,16 @@ const productos = [
    const productosEnCarrito = [];
    
    function agregarAlCarrito(producto) {
-     productosEnCarrito.push(producto);
-   
-     const productoCarrito = document.createElement("div");
-     productoCarrito.classList.add("list-group");
-     productoCarrito.innerHTML = `
-     <img src="${producto.imagen}" class="list-group-item d-flex justify-content-between align-items-center card-img-top"  style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;" alt="${producto.name}">
-       <p class="font-family-monospace">${producto.name} - Precio: $${producto.precio} <button class="btn btn-primary eliminar-btn" data-id="${producto.id}">Eliminar</button></p>
-     `;
-     carrito.appendChild(productoCarrito);
+    productosEnCarrito.push(producto);
+  
+    const productoCarrito = document.createElement("div");
+    productoCarrito.classList.add("list-group");
+    productoCarrito.setAttribute('data-id', producto.id); // Agrega el atributo data-id
+    productoCarrito.innerHTML = `
+    <img src="${producto.imagen}" class="list-group-item d-flex justify-content-between align-items-center card-img-top"  style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;" alt="${producto.name}">
+      <p class="font-family-monospace">${producto.name} - Precio: $${producto.precio} <button class="btn btn-primary eliminar-btn" data-id="${producto.id}">Eliminar</button></p>
+    `;
+    carrito.appendChild(productoCarrito);
    
      precioTotal += producto.precio;
      precioTotalElement.textContent = `Precio Total: $${precioTotal}`;
@@ -207,32 +208,21 @@ const productos = [
    }
    
    function eliminarDelCarrito(producto) {
-     const index = productosEnCarrito.findIndex((p) => p.id === producto.id);
-     if (index !== -1) {
-       productosEnCarrito.splice(index, 1);
-   
-       // Actualiza la vista del carrito
-       const carrito = document.getElementById("carrito");
-       carrito.innerHTML = ""; // Limpia el contenido del carrito
-   
-       // Recrea los elementos en el carrito
-       productosEnCarrito.forEach((p) => {
-         const productoCarrito = document.createElement("div");
-         productoCarrito.innerHTML = `
-           <p>${p.name} - Precio: $${p.precio} <button class="btn btn-secundary eliminar-btn" data-id="${p.id}">Eliminar</button></p>
-         `;
-         carrito.appendChild(productoCarrito);
-   
-         const eliminarBtn = productoCarrito.querySelector(".eliminar-btn");
-         eliminarBtn.addEventListener("click", () => {
-           eliminarDelCarrito(p);
-         });
-       });
-   
-       precioTotal = productosEnCarrito.reduce((total, p) => total + p.precio, 0);
-       precioTotalElement.textContent = `Precio Total: $${precioTotal}`;
-     }
-   }
+    const index = productosEnCarrito.findIndex((p) => p.id === producto.id);
+    if (index !== -1) {
+      productosEnCarrito.splice(index, 1);
+  
+      // Encuentra el elemento del producto en el carrito y lo elimina
+      const productoCarrito = document.querySelector(`.list-group[data-id="${producto.id}"]`);
+      if (productoCarrito) {
+        productoCarrito.remove();
+      }
+  
+      precioTotal = productosEnCarrito.reduce((total, p) => total + p.precio, 0);
+      precioTotalElement.textContent = `Precio Total: $${precioTotal}`;
+    }
+  }
+  
 
    document.getElementById('cash').addEventListener('change', updateTotal);
 document.getElementById('debit').addEventListener('change', updateTotal);
