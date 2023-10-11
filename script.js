@@ -1,160 +1,158 @@
-
 const productos = [
   {
-    name: "cemento" ,
+    name: "Cemento Portland" ,
     id: 1,
-    
     precio: 6,
-    imagen: "img/auriculares.jpg",
-    moneda: "USS",
+    imagen: "imgs/cemento.png",
+    moneda: "$",
   },
   {
-    name: "canio de cobre",
+    name: "Caño de cobre",
     id: 2,
     precio: 8,
-    imagen: "img/catan.jpg",
-    moneda: "USS",
+    imagen: "imgs/canio_de_cobre.jpg",
+    moneda: "$",
   },
   {
-    name: "tornilladora",
+    name: "Atornillador eléctrico",
     id: 3,
     precio: 7,
-    imagen: "img/mesapool.jpg",
-    moneda: "USS",
+    imagen: "imgs/tornilladora.jpg",
+    moneda: "$",
   },
   {
-    name: "taladro",
+    name: "Taladro",
     id: 4,
     precio: 6,
-    imagen: "",
-    moneda: "USS",
+    imagen: "imgs/taladro.jpg",
+    moneda: "$",
   },
   {
-    name: "compresor",
+    name: "Compresor",
     id: 5,
     precio: 608,
-    imagen: "",
-    moneda: "USS",
+    imagen: "imgs/compresor.jpg",
+    moneda: "$",
   },
   {
-    name: "martillo" ,
+    name: "Martillo" ,
     id: 6,
     precio: 6,
-    imagen: "",
-    moneda: "USS",
+    imagen: "imgs/martillo.jpg",
+    moneda: "$",
   },
   {
-    name: "balde",
+    name: "Balde",
     id: 7,
     precio: 8,
-    imagen: "",
-    moneda: "USS",
+    imagen: "imgs/balde.jpg",
+    moneda: "$",
   },
   {
-    name: "arena",
+    name: "Arena",
     id: 8,
     precio: 7,
-    imagen: "",
-    moneda: "USS",
+    imagen: "imgs/arena.jpg",
+    moneda: "$",
   },
   {
-    name: "trifasico",
+    name: "Trifásico",
     id: 9,
     precio: 6,
-    imagen: "",
+    imagen: "imgs/trifasico.png",
+    moneda: "$",
   },
   {
-    name: "franelas",
+    name: "Franelas",
     id: 10,
     precio: 68,
-    imagen: "",
-    moneda: "USS",
+    imagen: "imgs/franelas.jpg",
+    moneda: "$",
   },
   {
-    name: "cinta aluminio",
+    name: "Cinta de aluminio",
     id: 11,
     precio: 7,
-    imagen: "",
-    moneda: "USS",
+    imagen: "imgs/cinta_aluminio.jpg",
+    moneda: "$",
   },
   {
-    name: "motosierra",
+    name: "Motosierra",
     id: 11,
     precio: 6,
-    imagen: "",
-    moneda: "USS",
+    imagen: "imgs/motosierra.jpg",
+    moneda: "$",
   },
   {
-    name: "aislacion",
+    name: "Aislación",
     id: 12,
     precio: 8,
-    imagen: "",
-    moneda: "USS",
+    imagen: "imgs/aislacion.jpeg",
+    moneda: "$",
   },
    {
-    name: "hidrolavadora",
+    name: "Hidrolavadora",
     id: 13,
     precio: 89,
-    imagen: "",
-    moneda: "USS",
+    imagen: "imgs/hidrolavadora.jpg",
+    moneda: "$",
   },
    {
-    name: "rejilla",
+    name: "Rejilla",
     id: 13,
     precio: 89,
-    imagen: "",
-    moneda: "USS",
+    imagen: "imgs/rejilla.jpg",
+    moneda: "$",
   },
    {
-    name: "pintura",
+    name: "Pintura",
     id: 14,
     precio: 59,
-    imagen: "",
-    moneda: "USS",
+    imagen: "imgs/pintura.jpeg",
+    moneda: "$",
   },
    {
-    name: "cal",
+    name: "Cal",
     id: 15,
     precio: 66,
-    imagen: "",
-    moneda: "USS",
+    imagen: "imgs/cal.jpg",
+    moneda: "$",
   },
    {
-    name: "porlan",
+    name: "Membrana líquida",
     id: 16,
     precio: 669,
-    imagen: "",
-    moneda: "USS",
+    imagen: "imgs/membrana_liquida.jpg",
+    moneda: "$",
   },
    {
-    name: "baldoza",
+    name: "Baldosa de cerámica",
     id: 17,
     precio: 969,
-    imagen: "",
-    moneda: "USS",
+    imagen: "imgs/baldoza.jpeg",
+    moneda: "$",
   },
    {
-    name: "lampara bajo consumo",
+    name: "Lámpara de bajo consumo",
     id: 18,
     precio: 49,
-    imagen: "",
-    moneda: "USS",
+    imagen: "imgs/lampara_bajo_consumo.jpg",
+    moneda: "$",
   },
    {
-    name: "moladora",
+    name: "Amoladora",
     id: 19,
     precio: 47,
-    imagen: "",
-    moneda: "USS",
+    imagen: "imgs/moladora.jpeg",
+    moneda: "$",
   },
    {
-    name: "rotamartillo",
+    name: "Rotomartillo",
     id: 20,
     precio: 69,
-    imagen: "",
-    moneda: "USS",
-  },
-];
+    imagen: "imgs/rotamartillo.jpg",
+    moneda: "$",
+   }]
 
    const carrito = document.getElementById("carrito");
    const listaProductos = document.getElementById("listaProductos");
@@ -167,7 +165,7 @@ const productos = [
    
      productoDiv.innerHTML = `
      <div class="card ">
-       <img src="${producto.imagen}" class="card-img-top" style="max-width: 200px; max-height: 200px;" alt="${producto.name}">
+       <img src="${producto.imagen}" class="card-img-top" style="max-width: 200px; max-height: 200px; min-width: 200px; min-height: 200px;" alt="${producto.name}">
        <div class="card-body">
          <h5 class="card-title">${producto.name}</h5>
          <p class="card-text">Precio: $${producto.precio}</p>
@@ -192,8 +190,10 @@ const productos = [
      productosEnCarrito.push(producto);
    
      const productoCarrito = document.createElement("div");
+     productoCarrito.classList.add("list-group");
      productoCarrito.innerHTML = `
-       <p>${producto.name} - Precio: $${producto.precio} <button class="btn btn-primary eliminar-btn" data-id="${producto.id}">Eliminar</button></p>
+     <img src="${producto.imagen}" class="list-group-item d-flex justify-content-between align-items-center card-img-top"  style="max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px;" alt="${producto.name}">
+       <p class="font-family-monospace">${producto.name} - Precio: $${producto.precio} <button class="btn btn-primary eliminar-btn" data-id="${producto.id}">Eliminar</button></p>
      `;
      carrito.appendChild(productoCarrito);
    
@@ -219,7 +219,7 @@ const productos = [
        productosEnCarrito.forEach((p) => {
          const productoCarrito = document.createElement("div");
          productoCarrito.innerHTML = `
-           <p>${p.name} - Precio: $${p.precio} <button class="btn btn-primary eliminar-btn" data-id="${p.id}">Eliminar</button></p>
+           <p>${p.name} - Precio: $${p.precio} <button class="btn btn-secundary eliminar-btn" data-id="${p.id}">Eliminar</button></p>
          `;
          carrito.appendChild(productoCarrito);
    
@@ -233,3 +233,22 @@ const productos = [
        precioTotalElement.textContent = `Precio Total: $${precioTotal}`;
      }
    }
+
+   document.getElementById('cash').addEventListener('change', updateTotal);
+document.getElementById('debit').addEventListener('change', updateTotal);
+document.getElementById('credit').addEventListener('change', updateTotal);
+
+function updateTotal() {
+  let total = productosEnCarrito.reduce((total, p) => total + p.precio, 0);
+
+  if (this.id === 'cash') {
+   
+    total *= 0.9;
+  } else if (this.id === 'credit') {
+   
+    total *= 1.07;
+  }
+
+  precioTotal = total;
+  precioTotalElement.textContent = `Precio Total: $${precioTotal.toFixed(2)}`;
+}
