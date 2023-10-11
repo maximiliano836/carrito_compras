@@ -3,117 +3,73 @@ const productos = [
     name: "Cemento Portland" ,
     id: 1,
     precio: 6,
-<<<<<<< Updated upstream
     imagen: "imgs/cemento.png",
     moneda: "$",
-=======
-    imagen: "img/auriculares.jpg",
-    moneda: "USS",
-    stock: 4,
->>>>>>> Stashed changes
+    stock: 118,
   },
   {
     name: "Caño de cobre",
     id: 2,
     precio: 8,
-<<<<<<< Updated upstream
     imagen: "imgs/canio_de_cobre.jpg",
     moneda: "$",
-=======
-    imagen: "img/catan.jpg",
-    moneda: "USS",
-    stock: 40,
->>>>>>> Stashed changes
+    stock: 9,
   },
   {
     name: "Atornillador eléctrico",
     id: 3,
     precio: 7,
-<<<<<<< Updated upstream
     imagen: "imgs/tornilladora.jpg",
     moneda: "$",
-=======
-    imagen: "img/mesapool.jpg",
-    moneda: "USS",
-    stock: 43,
->>>>>>> Stashed changes
+    stock: 12,
   },
   {
     name: "Taladro",
     id: 4,
     precio: 6,
-<<<<<<< Updated upstream
     imagen: "imgs/taladro.jpg",
     moneda: "$",
-=======
-    imagen: "",
-    moneda: "USS",
-    stock: 42,
->>>>>>> Stashed changes
+    stock: 9,
   },
   {
     name: "Compresor",
     id: 5,
     precio: 608,
-<<<<<<< Updated upstream
     imagen: "imgs/compresor.jpg",
     moneda: "$",
-=======
-    imagen: "",
-    moneda: "USS",
-    stock: 32,
->>>>>>> Stashed changes
+    stock: 76,
   },
   {
     name: "Martillo" ,
     id: 6,
     precio: 6,
-<<<<<<< Updated upstream
     imagen: "imgs/martillo.jpg",
     moneda: "$",
-=======
-    imagen: "",
-    moneda: "USS",
-    stock: 290,
->>>>>>> Stashed changes
+    stock: 18,
   },
   {
     name: "Balde",
     id: 7,
     precio: 8,
-<<<<<<< Updated upstream
     imagen: "imgs/balde.jpg",
     moneda: "$",
-=======
-    imagen: "",
-    moneda: "USS",
-    stock: 426,
->>>>>>> Stashed changes
+    stock: 19,
   },
   {
     name: "Arena",
     id: 8,
     precio: 7,
-<<<<<<< Updated upstream
     imagen: "imgs/arena.jpg",
     moneda: "$",
-=======
-    imagen: "",
-    moneda: "USS",
-    stock: 992,
->>>>>>> Stashed changes
+    stock: 81,
   },
   {
     name: "Trifásico",
     id: 9,
     precio: 6,
-<<<<<<< Updated upstream
     imagen: "imgs/trifasico.png",
     moneda: "$",
-=======
-    imagen: "",
-    stock: 212,
->>>>>>> Stashed changes
+    stock: 81,
   },
   {
     name: "Franelas",
@@ -121,6 +77,7 @@ const productos = [
     precio: 68,
     imagen: "imgs/franelas.jpg",
     moneda: "$",
+    stock: 8,
   },
   {
     name: "Cinta de aluminio",
@@ -128,152 +85,96 @@ const productos = [
     precio: 7,
     imagen: "imgs/cinta_aluminio.jpg",
     moneda: "$",
+    stock: 83,
   },
   {
     name: "Motosierra",
     id: 11,
     precio: 6,
-<<<<<<< Updated upstream
     imagen: "imgs/motosierra.jpg",
     moneda: "$",
-=======
-    imagen: "",
-    moneda: "USS",
-    stock: 472,
->>>>>>> Stashed changes
+    stock: 68,
   },
   {
     name: "Aislación",
     id: 12,
     precio: 8,
-<<<<<<< Updated upstream
     imagen: "imgs/aislacion.jpeg",
     moneda: "$",
-=======
-    imagen: "",
-    moneda: "USS",
-    stock: 429,
->>>>>>> Stashed changes
+    stock: 97,
   },
    {
     name: "Hidrolavadora",
     id: 13,
     precio: 89,
-<<<<<<< Updated upstream
     imagen: "imgs/hidrolavadora.jpg",
-    moneda: "$",
-=======
-    imagen: "",
-     moneda: "USS",
-    stock: 429,
->>>>>>> Stashed changes
+     moneda: "$",
+    stock: 30,
   },
    {
     name: "Rejilla",
     id: 13,
     precio: 89,
-<<<<<<< Updated upstream
     imagen: "imgs/rejilla.jpg",
-    moneda: "$",
-=======
-    imagen: "",
-     moneda: "USS",
-    stock: 423,
->>>>>>> Stashed changes
+     moneda: "$",
+    stock: 11,
   },
    {
     name: "Pintura",
     id: 14,
     precio: 59,
-<<<<<<< Updated upstream
     imagen: "imgs/pintura.jpeg",
-    moneda: "$",
-=======
-    imagen: "",
-     moneda: "USS",
-    stock: 412,
->>>>>>> Stashed changes
+     moneda: "$",
+    stock: 94,
   },
    {
     name: "Cal",
     id: 15,
     precio: 66,
-<<<<<<< Updated upstream
     imagen: "imgs/cal.jpg",
-    moneda: "$",
-=======
-    imagen: "",
-     moneda: "USS",
-    stock: 49,
->>>>>>> Stashed changes
+     moneda: "$",
+    stock: 90,
   },
    {
     name: "Membrana líquida",
     id: 16,
     precio: 669,
-<<<<<<< Updated upstream
     imagen: "imgs/membrana_liquida.jpg",
-    moneda: "$",
-=======
-    imagen: "",
-    moneda: "USS",
-    stock: 42,
->>>>>>> Stashed changes
+     moneda: "$",
+     stock: 98,
   },
    {
     name: "Baldosa de cerámica",
     id: 17,
     precio: 969,
-<<<<<<< Updated upstream
     imagen: "imgs/baldoza.jpeg",
-    moneda: "$",
-=======
-    imagen: "",
-     moneda: "USS",
-    stock: 428,
->>>>>>> Stashed changes
+     moneda: "$",
+     stock: 39,
   },
    {
     name: "Lámpara de bajo consumo",
     id: 18,
     precio: 49,
-<<<<<<< Updated upstream
     imagen: "imgs/lampara_bajo_consumo.jpg",
     moneda: "$",
-=======
-    imagen: "",
-     moneda: "USS",
-    stock: 22,
->>>>>>> Stashed changes
+     stock: 34,
   },
    {
     name: "Amoladora",
     id: 19,
     precio: 47,
-<<<<<<< Updated upstream
     imagen: "imgs/moladora.jpeg",
-    moneda: "$",
-=======
-    imagen: "",
-     moneda: "USS",
-    stock: 48,
->>>>>>> Stashed changes
+     moneda: "$",
+     stock: 35,
   },
    {
     name: "Rotomartillo",
     id: 20,
     precio: 69,
-<<<<<<< Updated upstream
     imagen: "imgs/rotamartillo.jpg",
-    moneda: "$",
+     moneda: "$",
+     stock: 24,
    }]
-=======
-    imagen: "",
-     moneda: "USS",
-    stock: 420,
-  },
-];
->>>>>>> Stashed changes
 
 
    const carrito = document.getElementById("carrito");
@@ -292,23 +193,37 @@ const productos = [
          <h5 class="card-title">${producto.name}</h5>
          <p class="card-text">Precio: $${producto.precio}</p>
          <button class="btn btn-primary comprar-btn" data-id="${producto.id}">Comprar</button>
+         <div clas="d-flex justify-content-end">
+         <br>
          <label>
          <en>cantidad</en>
-         <input id="cantidad" type="number" clas="d-flex justify-content-end "min=0 maxlenght=3>
+         
+         <input id="cantidad${producto.id}" type="number"  "min=0 maxlenght=3>
          <label>
-         <p class="card-text d-flex justify-content-end stock">En stock: ${producto.stock}</p>
+         <p id="stock${producto.id}" class="card-text mr-5"> En stock: ${producto.stock}</p>
+         <div>
        </div>
      </div>
    `;
      
-    
      const comprarBtn = productoDiv.querySelector(".comprar-btn");
      comprarBtn.addEventListener("click", () => {
        agregarAlCarrito(producto);
        window.location.href = "#carrito";
-      
+       let input = document.getElementById("cantidad" + producto.id).value;
+       console.log(input)
+       let stock = document.getElementById("stock" + producto.id);
+       nuevoStock = producto.stock - input;
+       console.log(nuevoStock);
+       stock.innerHTML= "En stock"+ nuevoStock
+       if (nuevoStock <= 0) {
+         stock.innerHTML = `
+        <div class="alert alert-warning m-0" role="alert">
+        <strong m-1>Agotado</strong>
+        </div>`
+         comprarBtn.classList.add("disabled")
+       }
      });
-
    
      const listaProductos = document.getElementById("listaProductos");
      listaProductos.appendChild(productoDiv);
@@ -367,7 +282,6 @@ const productos = [
      }
    }
 
-<<<<<<< Updated upstream
    document.getElementById('cash').addEventListener('change', updateTotal);
 document.getElementById('debit').addEventListener('change', updateTotal);
 document.getElementById('credit').addEventListener('change', updateTotal);
@@ -386,5 +300,3 @@ function updateTotal() {
   precioTotal = total;
   precioTotalElement.textContent = `Precio Total: $${precioTotal.toFixed(2)}`;
 }
-=======
->>>>>>> Stashed changes
