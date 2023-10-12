@@ -198,38 +198,47 @@ const productos = [
          <label>
          <en>cantidad</en>
          
-         <input id="cantidad${producto.id}" type="number"  "min=0 maxlenght=3>
+         <input id="cantidad${producto.id}" type="number" min=0 maxlenght=3>
          <label>
-         <p id="stock${producto.id}" class="card-text mr-5"> En stock: ${producto.stock}</p>
+         <p id="stock${producto.id}" class="card-text mr-5"> En stock:${producto.stock}</p>
          <div>
        </div>
      </div>
    `;
      
      const comprarBtn = productoDiv.querySelector(".comprar-btn");
+     
      comprarBtn.addEventListener("click", () => {
        agregarAlCarrito(producto);
        window.location.href = "#carrito";
        let input = document.getElementById("cantidad" + producto.id).value;
-       console.log(input)
+       let currentStock= producto.stock
        let stock = document.getElementById("stock" + producto.id);
-       nuevoStock = producto.stock - input;
-       console.log(nuevoStock);
-       stock.innerHTML= "En stock"+ nuevoStock
-       if (nuevoStock <= 0) {
+      let nuevoStock = currentStock - input
+       if (input === "" && nuevoStock >= 0) {
+         let enCarrito = productosEnCarrito.filter(prod => prod.id === producto.id);
+         console.log(enCarrito);
+        nuevoStock = nuevoStock - enCarrito.length;
+        stock.innerHTML = "En stock" + nuevoStock;
+         
+       }else if (nuevoStock <= 0) {
          stock.innerHTML = `
         <div class="alert alert-warning m-0" role="alert">
         <strong m-1>Agotado</strong>
         </div>`
-         comprarBtn.classList.add("disabled")
+         
+         comprarBtn.classList.add("disabled");
+       } else {
+         stock.innerHTML = nuevoStock;
+        
        }
+       
      });
    
      const listaProductos = document.getElementById("listaProductos");
      listaProductos.appendChild(productoDiv);
    });
     
-     
    
 
    const productosEnCarrito = [];
